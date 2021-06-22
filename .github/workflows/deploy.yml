@@ -1,0 +1,27 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - 'master'      
+jobs: 
+  deploy:
+    name: Quasar Publish
+    runs-on: ubuntu-20.04
+    container: node:14.16.1
+    steps:
+      - uses: actions/checkout@v2         
+      - name: Install Quasar/cli  
+        run: npm install -g @quasar/cli
+      - name: Install project
+        run: npm install      
+      - name: Build project         
+        run: quasar build         
+      - name: Publish project  
+        uses: crazy-max/ghaction-github-pages@v2        
+        with:
+          target_branch: gh-pages
+          build_dir: dist/spa
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      
