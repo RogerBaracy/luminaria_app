@@ -1,0 +1,34 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - 'master'      
+jobs: 
+  deploy:
+    name: Quasar Publish
+    runs-on: ubuntu-20.04
+    container: node:12.16.2
+    steps:
+      - uses: actions/checkout@v2         
+      - name: Install Quasar/cli  
+        run: npm install -g @quasar/cli
+      - name: Install project
+        run: npm install      
+      - name: Build project         
+        run: quasar build         
+      - name: Publish project  
+        uses: crazy-max/ghaction-github-pages@v2        
+        with:
+          target_branch: gh-pages
+          build_dir: dist/spa
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          API_KEY: AIzaSyCxQRLn_1qRq982h1tJBvCvIOH9r35CacE
+          AUTH_DOMAIN: 478966688341.firebaseapp.com
+          DATABASE_URL: https=//luminaria-web-default-rtdb.firebaseio.com
+          PROJECT_ID: 478966688341
+          STORAGE_BUCKET: 478966688341.appspot.com
+          MESSAGING_SENDER_ID: 478966688341
+          APP_ID: 1=478966688341=web=0051c5046d1d9b190fc2dc
+          
+      
