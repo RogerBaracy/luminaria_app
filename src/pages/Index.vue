@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
 @Component
 export default class PageIndex extends Vue {
