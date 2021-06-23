@@ -25,7 +25,6 @@ export default class PageIndex extends Vue {
       appId: process.env.APP_ID
     };
     // Initialize Firebase
-    console.log(firebaseConfig);
     firebase.initializeApp(firebaseConfig);
   }
   
