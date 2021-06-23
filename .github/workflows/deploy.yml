@@ -17,19 +17,19 @@ jobs:
       - name: Create .env file
         run: touch .env  
       - name: API_KEY 
-        run:  echo API_KEY= ${{ secrets.API_KEY }} >> .env 
+        run:  echo API_KEY= AIzaSyCxQRLn_1qRq982h1tJBvCvIOH9r35CacE >> .env 
       - name: AUTH_DOMAIN   
-        run: echo AUTH_DOMAIN= ${{ secrets.AUTH_DOMAIN }} >> .env
+        run: echo AUTH_DOMAIN= 478966688341.firebaseapp.com >> .env
       - name: DATABASE_URL  
-        run: echo DATABASE_URL= ${{ secrets.DATABASE_URL }} >> .env
+        run: echo DATABASE_URL= https=//luminaria-web-default-rtdb.firebaseio.com >> .env
       - name: PROJECT_ID  
-        run: echo PROJECT_ID= ${{ secrets.PROJECT_ID }} >> .env
+        run: echo PROJECT_ID= 478966688341 >> .env
       - name: STORAGE_BUCKET  
-        run: echo STORAGE_BUCKET= ${{ secrets.STORAGE_BUCKET }} >> .env    
+        run: echo STORAGE_BUCKET= 478966688341.appspot.com >> .env    
       - name: MESSAGING_SENDER_ID  
-        run: echo MESSAGING_SENDER_ID= ${{ secrets.MESSAGING_SENDER_ID }} >> .env
+        run: echo MESSAGING_SENDER_ID= 478966688341 >> .env
       - name: APP_ID  
-        run: echo APP_ID= ${{ secrets.APP_ID }} >> .env  
+        run: echo APP_ID= 1=478966688341=web=0051c5046d1d9b190fc2dc >> .env  
       - name: Build project         
         run: quasar build         
       - name: Publish project  
