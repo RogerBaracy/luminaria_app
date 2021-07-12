@@ -3,9 +3,27 @@ import { RouteConfig } from 'vue-router';
 const routes: RouteConfig[] = [
   {
     path: '/',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') }
+    ]
+  },
+  {
+    path: '/documentation/app',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/DocApp.vue') }
+    ]
+  },
+  {
+    path: '/documentation/arduino',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/DocArduino.vue') }
     ]
   },
 

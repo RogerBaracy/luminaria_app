@@ -49,7 +49,7 @@ export default class PageIndex extends Vue {
       
     private listenVoicer() {
     this.loading = true;
-    
+    //@ts-ignore
     const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
     const recognition = new SpeechRecognition();    
     recognition.interimResults = true;    

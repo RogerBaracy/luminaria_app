@@ -12,10 +12,8 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          Luminária App
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -30,7 +28,6 @@
           header
           class="text-grey-8"
         >
-          Essential Links
         </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
@@ -51,16 +48,39 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksData = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Home',
+    caption: 'Página Inicial',
+    icon: 'home',
+    target:'_self',
+    link: 'home'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
+    title: 'Doc App',
+    caption: 'Documentação Luminária App',
+    icon: 'school',
+    target:'_self',
+    link: 'documentation/app'
+  },
+  {
+    title: 'Docs Arduíno',
+    caption: 'Documentação Luminária Arduíno',
+    icon: 'school',
+    target:'_self',
+    link: 'documentation/arduino'
+  },
+  {
+    title: 'Github App',
+    caption: 'Github Luminária App',
     icon: 'code',
-    link: 'https://github.com/quasarframework'
+    target:'_blank',
+    link: 'https://github.com/RogerBaracy/luminaria_app'
+  },
+  {
+    title: 'Github Arduíno',
+    caption: 'Github Luminária Arduíno',
+    icon: 'code',
+    target:'_blank',
+    link: 'https://github.com/RogerBaracy/luminaria_arduino'
   },
 ];
 
