@@ -23,6 +23,7 @@
         </div>
       </q-card-section>
       <q-card-section class="text-primary">
+        teste
       </q-card-section>
     </q-card>
     
