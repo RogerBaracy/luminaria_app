@@ -14,6 +14,16 @@
         <q-toolbar-title>
           Luminária App
         </q-toolbar-title>
+        <div class="q-mr-md">
+          <q-toggle
+            data-cy="alter-theme"
+            :label="$t('enable_dark')"
+            color="black"
+            v-bind:false-value="false"
+            v-bind:true-value="true"
+            v-model="isDark"
+          />
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -24,11 +34,7 @@
       content-class="bg-grey-1"
     >
       <q-list>
-        <q-item-label
-          header
-          class="text-grey-8"
-        >
-        </q-item-label>
+        <q-item-label header class="text-grey-8"> </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
@@ -44,53 +50,68 @@
 </template>
 
 <script lang="ts">
-import EssentialLink from 'components/EssentialLink.vue'
+import EssentialLink from 'components/EssentialLink.vue';
 
 const linksData = [
   {
     title: 'Home',
     caption: 'Página Inicial',
     icon: 'home',
-    target:'_self',
+    target: '_self',
     link: 'home'
+  },
+  {
+    title: 'Doc Firebase',
+    caption: 'Documentação Firebase',
+    icon: 'school',
+    target: '_self',
+    link: 'documentation/firebase'
   },
   {
     title: 'Doc App',
     caption: 'Documentação Luminária App',
     icon: 'school',
-    target:'_self',
+    target: '_self',
     link: 'documentation/app'
   },
   {
     title: 'Docs Arduíno',
     caption: 'Documentação Luminária Arduíno',
     icon: 'school',
-    target:'_self',
+    target: '_self',
     link: 'documentation/arduino'
   },
   {
     title: 'Github App',
     caption: 'Github Luminária App',
     icon: 'code',
-    target:'_blank',
+    target: '_blank',
     link: 'https://github.com/RogerBaracy/luminaria_app'
   },
   {
     title: 'Github Arduíno',
     caption: 'Github Luminária Arduíno',
     icon: 'code',
-    target:'_blank',
+    target: '_blank',
     link: 'https://github.com/RogerBaracy/luminaria_arduino'
-  },
+  }
 ];
 
-import { Vue, Component } from 'vue-property-decorator';
+import { Vue, Component, Watch } from 'vue-property-decorator';
 
 @Component({
   components: { EssentialLink }
 })
 export default class MainLayout extends Vue {
-  leftDrawerOpen = false;
-  essentialLinks = linksData;
+  private leftDrawerOpen = false;
+  private essentialLinks = linksData;
+  private isDark = true;
+  private mounted() {
+    this.$q.dark.set(true);
+  }
+  @Watch('isDark')
+  changeIsDark(newValue: boolean) {
+    this.$q.dark.set(newValue);
+  }
 }
 </script>

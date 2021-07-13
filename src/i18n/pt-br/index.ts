@@ -2,7 +2,7 @@
 // so you can safely delete all default props below
 
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful',
-  enable_dark: 'Theme dark'
+  failed: 'Ocorreu um erro',
+  success: 'Executado com Sucesso',
+  enable_dark: 'Tema Escuro'
 };
