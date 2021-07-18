@@ -10,28 +10,27 @@
       </q-card-section>
       <q-card-section>
         <ol>
-          <li><a href="#introducao" class="text-primary">Introdução </a></li>          
+          <li><a href="#introducao" class="text-primary">Introdução </a></li>
+          <li><a href="#firebase" class="text-primary">Projeto no Firebase </a></li>
+          <li><a href="#realtime" class="text-primary">Banco de dados Realtime</a></li>
         </ol>
       </q-card-section>
     </q-card>
-    <q-card class="q-mt-md">
-      <q-card-section
-        style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)"
-      >
-        <div class="text-h5 text-white" id="introducao">
-          Introdução
-        </div>
-      </q-card-section>
-      <q-card-section class="text-primary">
-        teste
-      </q-card-section>
-    </q-card>
-    
+
+    <CardItem v-bind:propData="data" />
   </q-page>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-@Component
-export default class DocFirebase extends Vue {}
+import CardItem from '../components/documentation/CardItems.vue';
+import data from './data/firebase';
+@Component({
+  components: {
+    CardItem
+  }
+})
+export default class DocFirebase extends Vue {
+  private data = data;
+}
 </script>

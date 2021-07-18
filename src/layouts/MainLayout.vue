@@ -61,21 +61,21 @@ const linksData = [
     link: 'home'
   },
   {
-    title: 'Doc Firebase',
+    title: 'Doc Firebase: 1º Passo',
     caption: 'Documentação Firebase',
     icon: 'school',
     target: '_self',
     link: 'documentation/firebase'
   },
   {
-    title: 'Doc App',
+    title: 'Doc App: 2º Passo',
     caption: 'Documentação Luminária App',
     icon: 'school',
     target: '_self',
     link: 'documentation/app'
   },
   {
-    title: 'Docs Arduíno',
+    title: 'Doc Arduíno: 3º Passo',
     caption: 'Documentação Luminária Arduíno',
     icon: 'school',
     target: '_self',

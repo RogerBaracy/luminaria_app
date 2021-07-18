@@ -3,16 +3,68 @@
     <q-btn
       v-if="hasRecognition"
       v-bind:loading="loading"
-      class="q-ml-sm"
-      md
+      class="q-ml-sm glossy"
+      size="xl"
+      round
       color="primary"
-      icon="mic"      
+      icon="mic"
       v-on:click="listenVoicer()"
     >
       <template v-slot:loading>
         <q-spinner-audio color="white" />
       </template>
     </q-btn>
+    <q-fab
+      v-model="showActions"
+      external-label
+      label="Comandos"
+      vertical-actions-align="left"
+      label-position="top"
+      glossy      
+      color="primary"
+      icon="keyboard_arrow_down"
+      direction="down"
+    >
+      <q-fab-action
+        color="light-green-12"
+        external-label
+        @click="cmd('ligar')"
+        icon="flash_on"
+        label="Ligar"
+      />
+      <q-fab-action
+        color="green"
+        external-label
+        glossy
+        @click="cmd('verde')"
+        icon="lightbulb"
+        label="Verde"
+      />
+      <q-fab-action
+        color="red"
+        external-label
+        glossy
+        @click="cmd('vermelho')"
+        icon="lightbulb"
+        label="Vermelho"
+      />
+      <q-fab-action
+        color="amber"
+        external-label
+        glossy
+        @click="cmd('amarelo')"
+        icon="lightbulb"
+        label="Amarelo"
+      />
+      <q-fab-action
+        color="grey"
+        external-label
+        glossy
+        @click="cmd('desligar')"
+        icon="flash_off"
+        label="Desligar"
+      />
+    </q-fab>
   </q-page>
 </template>
 
@@ -24,6 +76,8 @@ import firebase from 'firebase';
 export default class PageIndex extends Vue {
   private hasRecognition = false;
   private loading = false;
+  private showActions = false;
+
   mounted() {
     const firebaseConfig = {
       apiKey: process.env.API_KEY,
@@ -46,16 +100,15 @@ export default class PageIndex extends Vue {
       : (this.hasRecognition = false);
   }
 
-      
-    private listenVoicer() {
+  private listenVoicer() {
     this.loading = true;
     //@ts-ignore
     const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
-    const recognition = new SpeechRecognition();    
-    recognition.interimResults = true;    
-    recognition.lang = 'pt-br' //this.$i18n.locale;    
+    const recognition = new SpeechRecognition();
+    recognition.interimResults = true;
+    recognition.lang = 'pt-br';
     recognition.continuous = true;
-   
+
     recognition.start();
     var transcript = '';
     recognition.onresult = (event: any) => {
@@ -68,14 +121,18 @@ export default class PageIndex extends Vue {
           }
         }
         setTimeout(() => {
-          const db = firebase.database();
           recognition.stop();
           this.loading = false;
           console.log(transcript);
+          const db = firebase.database();
           db.ref('color').set(transcript.toLowerCase());
         }, 500);
       }
     };
+  }
+  private cmd(action: string){
+    const db = firebase.database();
+    db.ref('color').set(action);
   }
 }
 </script>
