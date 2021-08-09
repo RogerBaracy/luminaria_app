@@ -20,7 +20,7 @@
       label="Comandos"
       vertical-actions-align="left"
       label-position="top"
-      glossy      
+      glossy
       color="primary"
       icon="keyboard_arrow_down"
       direction="down"
@@ -77,20 +77,16 @@ export default class PageIndex extends Vue {
   private hasRecognition = false;
   private loading = false;
   private showActions = false;
-
-  mounted() {
-    const firebaseConfig = {
-      apiKey: process.env.API_KEY,
-      authDomain: process.env.AUTH_DOMAIN,
-      databaseURL: process.env.DATABASE_URL,
-      projectId: process.env.PROJECT_ID,
-      storageBucket: process.env.STORAGE_BUCKET,
-      messagingSenderId: process.env.MESSAGING_SENDER_ID,
-      appId: process.env.APP_ID
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
+  private firebaseConfig = {
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID,
+    appId: process.env.APP_ID
+  };
+  created() {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const SpeechRecognition =
       //@ts-ignore
@@ -102,12 +98,20 @@ export default class PageIndex extends Vue {
 
   private listenVoicer() {
     this.loading = true;
+
+    // Initialize Firebase
+    if (!firebase.apps.length) {
+      firebase.initializeApp(this.firebaseConfig);
+    }
+    
+    const SpeechRecognition =
     //@ts-ignore
-    const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+      window.webkitSpeechRecognition || window.SpeechRecognition;
     const recognition = new SpeechRecognition();
-    recognition.interimResults = true;
+    recognition.interimResults = false;
     recognition.lang = 'pt-br';
-    recognition.continuous = true;
+    recognition.continuous = false;
+    recognition.maxAlternatives = 1;
 
     recognition.start();
     var transcript = '';
@@ -130,7 +134,11 @@ export default class PageIndex extends Vue {
       }
     };
   }
-  private cmd(action: string){
+  private cmd(action: string) {  
+     // Initialize Firebase
+    if (!firebase.apps.length) {
+      firebase.initializeApp(this.firebaseConfig);
+    }  
     const db = firebase.database();
     db.ref('color').set(action);
   }

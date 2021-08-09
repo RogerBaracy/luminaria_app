@@ -24,7 +24,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import CardItem from '../components/documentation/CardItems.vue';
-import data from './data/firebase';
+import data from './data/docFirebase';
 @Component({
   components: {
     CardItem

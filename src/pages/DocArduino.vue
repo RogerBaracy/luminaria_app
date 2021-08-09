@@ -25,7 +25,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import CardItem from '../components/documentation/CardItems.vue';
-import data from './data/arduino';
+import data from './data/docArduino';
 @Component({
   components: {
     CardItem

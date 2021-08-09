@@ -28,6 +28,12 @@
             <a href="#firebase" class="text-primary"> Instalando Firebase </a>
           </li>
           <li>
+            <a href="#config_env" class="text-primary"> Configurando o acesso ao Banco de Dados </a>
+          </li>
+          <li>
+            <a href="#codigo" class="text-primary"> Explicando o código </a>
+          </li>
+          <li>
             <a href="#referencias" class="text-primary"> Referências </a>
           </li>
         </ol>
@@ -40,7 +46,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import CardItem from '../components/documentation/CardItems.vue';
-import data from './data/app';
+import data from './data/docApp';
 @Component({
   components:{
     CardItem
