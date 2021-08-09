@@ -57,7 +57,7 @@ const data = [
     ancora: 'referencias',
     title: 'Referências',
     content: 
-      ['Em desenvolvimento ...'],
+      ['Playlist Arduíno + Javascript + Firebase <br> <a href="https://www.youtube.com/watch?v=kmT5mVBF2tI&list=PLw9oYsqdATnP6rCIsNKU0_be2ShGubcGc" target="_blank"> Joao Rubens Marchete Filho</a>'],
   },
 
   

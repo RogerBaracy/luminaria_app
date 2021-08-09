@@ -15,6 +15,9 @@
           <li><a href="#johnny_five"> Instalando Johnny Five JS </a></li>
           <li><a href="#dotenv"> Instalando Dotenv </a></li>
           <li><a href="#firebase"> Instalando Firebase </a></li>
+          <li>
+            <a href="#config_env" class="text-primary"> Configurando o acesso ao Banco de Dados </a>
+          </li>
         </ol>
       </q-card-section>
     </q-card>
