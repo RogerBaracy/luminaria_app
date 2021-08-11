@@ -3,25 +3,27 @@ const data = [
     ancora: 'introducao',
     title: 'Introdução',
     content:
-      ['Em desenvolvimento ...']
+      ['Esse tópico da documentação se refere a código que irá executar no Arduíno.']
   },
   {
     ancora: 'node',
     title: 'Criando um projeto Node',
     content:
-      ['Em desenvolvimento ...']
+      ['Crie uma pasta e execute o comando: <br> npm init']
   },
   {
     ancora: 'johnny_five',
     title: 'Instalando Johnny Five JS',
     content:
-      ['Em desenvolvimento ...']
+      ['Johnny Five JS é uma biblioteca JavaScript Open Source para programação para IoT e robótica, para instala-la execute o comando: <br> npm install johnny-five',
+      'Nota de rodapé: Johnny Five é um filme da década de 80, cujo o personagem principal era um robô.'
+    ]
   },
   {
     ancora: 'dotenv',
     title: 'Instalando o DotEnv',
     content: 
-      ['O DotEnv é nescessário para que as chaves de acesso ao Firebase não fiquem expostas no Github. Da mesma forma que instalamos no projeto da aplicação web execute o comando:',
+      ['O DotEnv é nescessário para que as chaves de acesso ao Firebase não fiquem expostas no Github. Da mesma forma que instalarmos no projeto da aplicação web execute o comando:',
         'npm install dotenv <br> ou <br> yarn add dotenv'
     ],
   },

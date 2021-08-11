@@ -4,7 +4,7 @@ services:
     app:
         build: .
         container_name: luminaria_app
-        command: quasar dev &
+        command: quasar dev -m pwa &
         ports:
             - "3003:3003"
         volumes: 
