@@ -14,6 +14,7 @@
         v-for="c in i.content"
         v-bind:key="c"
         v-html="c"
+        
       />
     </q-card>
   </div>
