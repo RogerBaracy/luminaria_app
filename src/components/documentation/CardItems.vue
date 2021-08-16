@@ -4,7 +4,7 @@
       <q-card-section
         style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)"
       >
-        <div class="text-h5 text-white" id="introducao">
+        <div class="text-h5 text-white">
           {{ i.title }}
         </div>
       </q-card-section>

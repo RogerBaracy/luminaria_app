@@ -44,6 +44,12 @@ const data = [
       'API_KEY= xxxxxxxxxxxxxxxxxxxxxxxxxxx <br> AUTH_DOMAIN= 111111111111.firebaseapp.com <br> DATABASE_URL= https=//xxxxxxxxxxxxxxxxxx.firebaseio.com <br> PROJECT_ID= 111111111111 <br> STORAGE_BUCKET= xxxxxxxxxxxxx.appspot.com <br> MESSAGING_SENDER_ID= 111111111111111 <br> APP_ID= 1=111111111111111=web=xxxxxxxxxxxxxxxxxxx',
     ],
   },
+  {
+    ancora: 'ide',
+    title: 'Configurando a IDE do Arduíno',
+    content: 
+      ['Em Desenvolvimento'],
+  },
   
   
 ];

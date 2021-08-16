@@ -18,6 +18,9 @@
           <li>
             <a href="#config_env" class="text-primary"> Configurando o acesso ao Banco de Dados </a>
           </li>
+          <li>
+            <a href="#ide" class="text-primary"> Configurando a IDE do Arduíno </a>
+          </li>
         </ol>
       </q-card-section>
     </q-card>
