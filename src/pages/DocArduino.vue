@@ -21,6 +21,11 @@
           <li>
             <a href="#ide" class="text-primary"> Configurando a IDE do Arduíno </a>
           </li>
+          <li>
+            <a href="#code" class="text-primary"> Explicando o código </a>
+          </li>
+
+          
         </ol>
       </q-card-section>
     </q-card>

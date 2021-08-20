@@ -3,7 +3,7 @@ const data = [
     ancora: 'introducao',
     title: 'Introdução',
     content:
-      ['Esse tópico da documentação se refere a código que irá executar no Arduíno.']
+      ['Esse tópico da documentação se refere ao código que irá executar no Arduíno.']
   },
   {
     ancora: 'node',
@@ -48,7 +48,13 @@ const data = [
     ancora: 'ide',
     title: 'Configurando a IDE do Arduíno',
     content: 
-      ['Em Desenvolvimento'],
+      ['Conecte o Arduíno no computador e abra a IDE do Arduíno <br/> Vá em File > Exemples > Firmata > StandardFirmata'],
+  },
+  {
+    ancora: 'code',
+    title: 'Explicando o código',
+    content: 
+      ['Em desenvolvimento ...'],
   },
   
   

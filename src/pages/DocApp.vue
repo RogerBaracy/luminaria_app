@@ -5,7 +5,7 @@
         style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)"
       >
         <div class="text-h4 text-white">
-          Documentação App
+          Documentação Aplicação Web
         </div>
       </q-card-section>
       <q-card-section>
@@ -33,7 +33,7 @@
             </a>
           </li>
           <li>
-            <a href="#codigo" class="text-primary">Explicando o código</a>
+            <a href="#code" class="text-primary">Explicando o código</a>
           </li>
         </ol>
       </q-card-section>
@@ -44,7 +44,7 @@
       <q-card-section
         style="background: radial-gradient(circle, #35a2ff 0%, #014a88 100%)"
       >
-        <div class="text-h5 text-white" id="codigo">
+        <div class="text-h5 text-white" id="code">
           Explicando o código
         </div>
       </q-card-section>

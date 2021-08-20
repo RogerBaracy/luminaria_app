@@ -61,40 +61,54 @@ const linksData = [
     link: 'home'
   },
   {
-    title: 'Doc Firebase: 1º Passo',
+    title: 'Sobre o projeto',
+    caption: 'Introdução',
+    icon: 'help',
+    target: '_self',
+    link: 'about'
+  },
+  {
+    title: '1º Passo: Firebase',
     caption: 'Documentação Firebase',
     icon: 'school',
     target: '_self',
     link: 'documentation/firebase'
   },
   {
-    title: 'Doc App: 2º Passo',
-    caption: 'Documentação Luminária App',
+    title: '2º Passo: Aplicação Web',
+    caption: 'Documentação Aplicação Web',
     icon: 'school',
     target: '_self',
     link: 'documentation/app'
   },
   {
-    title: 'Doc Arduíno: 3º Passo',
-    caption: 'Documentação Luminária Arduíno',
+    title: '3º Passo: Arduíno',
+    caption: 'Documentação Arduíno',
     icon: 'school',
     target: '_self',
     link: 'documentation/arduino'
   },
   {
-    title: 'Github App',
-    caption: 'Github Luminária App',
+    title: 'Github Aplicação Web',
+    caption: 'Código Fonte Aplicação Web',
     icon: 'code',
     target: '_blank',
     link: 'https://github.com/RogerBaracy/luminaria_app'
   },
   {
     title: 'Github Arduíno',
-    caption: 'Github Luminária Arduíno',
+    caption: 'Código Fonte Luminária Arduíno',
     icon: 'code',
     target: '_blank',
     link: 'https://github.com/RogerBaracy/luminaria_arduino'
-  }
+  },
+  {
+    title: 'Referências',
+    caption: 'Links importantes',
+    icon: 'link',
+    target: '_self',
+    link: 'references'
+  },
 ];
 
 import { Vue, Component, Watch } from 'vue-property-decorator';
