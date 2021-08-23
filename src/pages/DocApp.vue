@@ -134,7 +134,7 @@
               var transcript = '';
               recognition.onresult = (event) => {
                 if (event.results) {
-                  for (let i = event.resultIndex; i <	 event.results.length; i++) {
+                  for (let i = event.resultIndex; i &lt	 event.results.length; i++) {
                     if (event.results[i].isFinal) {
                       transcript = event.results[i][0].transcript.trim();
                     } else {
@@ -172,7 +172,7 @@
               colocar as credências diretamente numa variavel no mesmo arquivo.
             </p>
           </div>
-          <a download="sample.html" href="files/sample.html" role="button">
+          <a download="sample.html" class="text-primary" href="files/sample.html" role="button">
             Download do exemplo
           </a>
         </q-card-section>

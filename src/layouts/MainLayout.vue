@@ -93,7 +93,7 @@ const linksData = [
     caption: 'Imagens do Projeto',
     icon: 'photo',
     target: '_self',
-    link: 'imagens'
+    link: 'galery'
   },
   {
     title: 'Referências',

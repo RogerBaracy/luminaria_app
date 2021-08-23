@@ -13,10 +13,24 @@ const routes: RouteConfig[] = [
     ]
   },
   {
+    path: '/galery',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/Galery.vue') }
+    ]
+  },
+  {
     path: '/documentation/firebase',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/DocFirebase.vue') }
+    ]
+  },
+  {
+    path: '/references',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/References.vue') }
     ]
   },
   {

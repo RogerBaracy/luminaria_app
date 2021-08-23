@@ -9,7 +9,7 @@ const data = [
     ancora: 'firebase',
     title: 'Projeto no Firebase',
     content:
-      ['Acesse <a href="https://console.firebase.google.com/">console.firebase.google.com</a> com sua conta de e-mail do Google e click em <strong>"Adicionar Projeto" </strong> ']
+      ['Acesse <a href="https://console.firebase.google.com/" target="_blank" class="text-primary" >console.firebase.google.com</a> com sua conta de e-mail do Google e click em <strong>"Adicionar Projeto" </strong> ']
   },
   {
     ancora: 'realtime',

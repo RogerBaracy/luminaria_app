@@ -14,7 +14,7 @@ const data = [
       'A instalação desse framework é opcional, você pode trabalhar com o framework de sua preferência ou até mesmo usando Html, css e JavaScript sem frameworks <br />',
       'Para utilizar o Quasar Framework o Node.js >=12.22.1 é requerido. <br/> Execute o comando:',
       'yarn global add @quasar/cli <br/> ou  <br/> npm install -g @quasar/cli',
-      'link para a documentação: <a href="https://quasar.dev/quasar-cli/installation">https://quasar.dev/quasar-cli/installation</a>'
+      'link para a documentação: <a href="https://quasar.dev/quasar-cli/installation" target="_blank" class="text-primary">https://quasar.dev/quasar-cli/installation</a>'
     ]
   },
   {
@@ -43,7 +43,7 @@ const data = [
     title: 'Configurando o acesso ao banco de dados',
     content: [
       'Crie um arquivo .env na raiz do projeto',
-      'Leia a etapa 3 da documentação do Firebase no link: <a href="https://firebase.google.com/docs/web/setup" target="_blank">Add Firebase in Project Web</>',
+      'Leia a etapa 3 da documentação do Firebase no link: <a href="https://firebase.google.com/docs/web/setup" target="_blank" class="text-primary">Add Firebase in Project Web</>',
       'Para conseguir as configurações de acesso ao seu banco de dados criado no Firebase acesse esse link descrito na documentação do Firebase: <a href="https://support.google.com/firebase/answer/7015592#zippy=%2Cneste-artigo" target="_blank">Arquivo de Configuração</>',
       'Agora no arquivo .env crie as variaveis com as configurações de acesso ao Firebase do seu projeto. Exemplo:',
       'API_KEY= xxxxxxxxxxxxxxxxxxxxxxxxxxx <br> AUTH_DOMAIN= 111111111111.firebaseapp.com <br> DATABASE_URL= https=//xxxxxxxxxxxxxxxxxx.firebaseio.com <br> PROJECT_ID= 111111111111 <br> STORAGE_BUCKET= xxxxxxxxxxxxx.appspot.com <br> MESSAGING_SENDER_ID= 111111111111111 <br> APP_ID= 1=111111111111111=web=xxxxxxxxxxxxxxxxxxx'
