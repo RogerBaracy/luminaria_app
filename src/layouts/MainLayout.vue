@@ -89,6 +89,20 @@ const linksData = [
     link: 'documentation/arduino'
   },
   {
+    title: 'Galeria',
+    caption: 'Imagens do Projeto',
+    icon: 'photo',
+    target: '_self',
+    link: 'imagens'
+  },
+  {
+    title: 'Referências',
+    caption: 'Links importantes',
+    icon: 'link',
+    target: '_self',
+    link: 'references'
+  },
+  {
     title: 'Github Aplicação Web',
     caption: 'Código Fonte Aplicação Web',
     icon: 'code',
@@ -102,13 +116,7 @@ const linksData = [
     target: '_blank',
     link: 'https://github.com/RogerBaracy/luminaria_arduino'
   },
-  {
-    title: 'Referências',
-    caption: 'Links importantes',
-    icon: 'link',
-    target: '_self',
-    link: 'references'
-  },
+  
 ];
 
 import { Vue, Component, Watch } from 'vue-property-decorator';

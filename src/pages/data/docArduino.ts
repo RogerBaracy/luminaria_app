@@ -50,12 +50,7 @@ const data = [
     content: 
       ['Conecte o Arduíno no computador e abra a IDE do Arduíno <br/> Vá em File > Exemples > Firmata > StandardFirmata'],
   },
-  {
-    ancora: 'code',
-    title: 'Explicando o código',
-    content: 
-      ['Em desenvolvimento ...'],
-  },
+  
   
   
 ];
