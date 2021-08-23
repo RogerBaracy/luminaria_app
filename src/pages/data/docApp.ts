@@ -3,7 +3,7 @@ const data = [
     ancora: 'introducao',
     title: 'Introdução',
     content: [
-      'Esse tópico da documentação se refere a aplicação web, <br /> nessa aplicação enviaremos comandos de voz e ações dos botões para o firebase'
+      'Esse tópico da documentação se refere a aplicação web, <br /> nessa aplicação enviaremos comandos de voz e ações dos botões para o firebase.'
     ]
   },
   {
@@ -42,7 +42,7 @@ const data = [
     ancora: 'config_env',
     title: 'Configurando o acesso ao banco de dados',
     content: [
-      'Crie um arquivo .env na raiz do projeto',
+      'Crie um arquivo .env na raiz do projeto.',
       'Leia a etapa 3 da documentação do Firebase no link: <a href="https://firebase.google.com/docs/web/setup" target="_blank" class="text-primary">Add Firebase in Project Web</>',
       'Para conseguir as configurações de acesso ao seu banco de dados criado no Firebase acesse esse link descrito na documentação do Firebase: <a href="https://support.google.com/firebase/answer/7015592#zippy=%2Cneste-artigo" target="_blank">Arquivo de Configuração</>',
       'Agora no arquivo .env crie as variaveis com as configurações de acesso ao Firebase do seu projeto. Exemplo:',

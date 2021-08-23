@@ -13,6 +13,13 @@ const routes: RouteConfig[] = [
     ]
   },
   {
+    path: '/about',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/About.vue') }
+    ]
+  },
+  {
     path: '/galery',
     component: () => import('layouts/MainLayout.vue'),
     children: [
