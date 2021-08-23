@@ -1,0 +1,66 @@
+<html>
+
+<body>
+	<!--CDNs Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+	<button onclick="escutar()">Escutar</button>
+	<textarea id="frase" value=""></textarea>
+</body>
+
+</html>
+<script>
+	//Configuração de acesso ao Firebase
+	var firebaseConfig = {
+		apiKey: '<apiKey>',
+		authDomain: '<authDomain>.firebaseapp.com',
+		databaseURL: 'https=//<databaseURL>-default-rtdb.firebaseio.com',
+		projectId: '<projectId>',
+		storageBucket: '<storageBucket>.appspot.com',
+		messagingSenderId: '<messagingSenderId>',
+		appId: '<appId>=web=0051c5046d1d9b190fc2dc'
+	};
+
+	//Configuração de acesso ao Microfone
+	const SpeechRecognition =
+		window.webkitSpeechRecognition || window.SpeechRecognition;
+	var recognition = new SpeechRecognition();
+	recognition.interimResults = false;
+	recognition.lang = 'pt-br';
+	recognition.continuous = false;
+	recognition.maxAlternatives = 1;
+
+	function escutar() {
+		if (!firebase.apps.length) {
+			firebase.initializeApp(firebaseConfig);
+		}
+
+		var frase = document.getElementById('frase');
+		frase.value = 'escutando...';
+
+		//Começa a captar o audio
+		recognition.start();
+		var transcript = '';
+		recognition.onresult = (event) => {
+			if (event.results) {
+				for (let i = event.resultIndex; i < event.results.length; i++) {
+					if (event.results[i].isFinal) {
+						transcript = event.results[i][0].transcript.trim();
+					} else {
+						transcript += event.results[i][0].transcript;
+					}
+				}
+				setTimeout(() => {
+					recognition.stop();
+					console.log(transcript);
+					frase.value = transcript;
+
+					// Envia para o Firebase
+					const db = firebase.database();
+					db.ref('color').set(transcript.toLowerCase());
+				}, 500);
+			}
+		};
+	}
+</script>
